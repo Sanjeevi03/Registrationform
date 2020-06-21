@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {
+margin:0;
+padding:0;
+font-family:sans-serif;
+ background-size: cover;
+ background: -webkit-linear-gradient(left,#db72bc, #f205af);
+}
+
+
+.login{
+border:0.1px solid black;
+background-color:white;
+box-sizing: border-box;  
+  width: 450px;
+  height: 5in;
+padding:50px;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+position:absolute;
+border-radius: 20px;
+box-shadow: 0 21px 42px rgba(0, 0, 0, 0.30), 0 18px 17px rgba(0, 0, 0, 0.22);
+}
+
+.login h1{
+width:300px;
+font-size:40px;
+border-bottom:6px solid green;
+margin-bottom:20px;
+padding:10px;
+}
+
+.txtbox{
+width:300px;
+overflow:hidden;
+font-size:18px;
+padding-top:50px;
+padding-bottom:0px;
+margin:10px 0;
+border-bottom:1px solid black;
+}
+.txtbox input{
+border:2px;
+outline:none;
+background:none;
+color:black:
+font-size:25px;
+margin:0 10px;
+color:black;
+}
+.txtbox i {
+font-size:0.4cm;
+color:black;
+}
+
+.btn{
+width:300px;
+border:0.1px solid black;
+color:brown;
+padding:3px;
+font-size:20px;
+border-radius:50px;
+margin-top:27px;
+background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+}
+.fp{
+text-align:center;
+margin-top:16px;
+}
+.sign{
+text-align:center;
+margin-top:10px;
+}
+
+.btn:hover{
+  background: -webkit-linear-gradient(left, #b224ef, #7579ff);
+</style>
+<script>
+function validation(){
+     var x=document.forms["myform"]["us1"].value;
+     if (x==""){
+           alert("Please! Enter Your Name");
+     return false;
+  }
+var y=document.forms["myform"]["psw"].value;
+    if (y==""){
+           alert("Invalid Password");
+     return false;
+  }
+}
+</script>
+</head>
+<body>
+<form name="myform"  onsubmit="return validation()" method="post">
+<div class="login">
+<h1>Login</h1>
+<div class="txtbox">
+<i class="glyphicon glyphicon-user"></i>
+<input type="text" title="Fill the name" placeholder="User Name" name="us1">
+</div>
+<div class="txtbox">
+<i class="glyphicon glyphicon-lock" ></i>
+<input type="password" title="Fill the Password" placeholder="Password" name="psw">
+</div>
+<span><input class="btn" type="submit" value="Login"></span>
+<div class="fp"><a href="#">forgot password?</a></div>
+<div class="sign">Didn't have account?<a href="index.html" >Register here!</a></div>
+</div>
+</form>
+</body>
+</html>
